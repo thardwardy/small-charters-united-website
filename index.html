@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Charting Team</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body>
+		<p style="text-align: center;"><img src="banner.png" width="30%" float="center"></p>
+		<div class="navbar">
+			<a href="index.html" class="active">Home</a>
+			<div class="dropdown">
+				<button class="dropbtn">Packs/Setlists
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="packs/airconhero.html">AirCon Hero</a>
+					<a href="packs/djentherocollection.html">Djent Hero Collection</a>
+					<a href="packs/instru-metal.html">Instru-Metal</a>
+					<a href="packs/parallaxhero.html">Parallax Hero</a>
+					<a href="packs/revolved.html">Revolved</a>
+					<a href="packs/zancharted.html">Zancharted</a>
+				</div>
+			</div>
+			<a href="charters.html">Charters</a>
+		</div>
+		<h1 style="text-align: center">Latest</h1>
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 6</div>
+				<a href="packs/zancharted.html"><img src="images/zancharted.png" style="width:100%"></a>
+				<h3 style="text-align: center;">Zancharted (Zantor)</h3>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 6</div>
+				<a href="packs/insru-metal.html"><img src="images/instru-metal.png" style="width:100%"></a>
+				<h3 style="text-align: center;">Instru-Metal Vol. 1 (ACJ)</h3>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 6</div>
+				<a href="packs/revolved.html"><img src="images/revolved.png" style="width:100%"></a>
+				<h3 style="text-align: center;">Revolved Vol. 3 - Mathcore Fest II (NicolasPL)
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 6</div>
+				<a href="packs/parallaxhero.html"><img src="images/parallaxhero.png" style="width:100%"></a>
+				<h3 style="text-align: center;">Parallax Hero (ParallaxDG)</h3>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">5 / 6</div>
+				<a href="packs/djentherocollection.html"><img src="images/djentherocollection.png" style="width:100%"></a>
+				<h3 style="text-align: center;">Djent Hero Collection Pack #9 (Djent Hero Team)</h3>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">6 / 6</div>
+				<a href="packs/airconhero.html"><img src="images/airconhero.png" style="width:100%"></a>
+				<h3 style="text-align: center;">AirCon Hero Vol. 3 - The Burning (ACJ)</h3>
+			</div>
+		</div>
+		<br>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+			<span class="dot" onclick="currentSlide(6)"></span>
+		</div>
+		<script>
+			let slideIndex = 0;
+			showSlides();
+			function showSlides() {
+				let i;
+				let slides = document.getElementsByClassName("mySlides");
+				let dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";  
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {slideIndex = 1}    
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+				setTimeout(showSlides, 4000); // Change image every 2 seconds
+			}
+		</script>
+	</body>
+</html>

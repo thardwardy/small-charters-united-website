@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Charting Team</title>
+		<title> | The Charters Next Door</title>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" media="screen" href="../style.css">
@@ -51,10 +51,30 @@
 		
 		<div id="xxx" class="tabcontent">
 			<h2>PACK NAME HERE</h2>
+			<iframe width="840" height="473" src="https://www.youtube.com/embed/url" frameborder="0" allowfullscreen></iframe>
 			<h2><a href="link">Download</a></h2>
 			<p><a href="link">Google Drive Backup</a></p>
 			<h2>Song List</h2>
 			
 		</div>
+		
+		<script>
+			function openPage(pageName,elmnt,color) {
+				var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablink");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].style.backgroundColor = "";
+				}
+				document.getElementById(pageName).style.display = "block";
+					elmnt.style.backgroundColor = color;
+				}
+
+				// Get the element with id="defaultOpen" and click on it
+				document.getElementById("defaultOpen").click();
+		</script>
 	</body>
 </html>

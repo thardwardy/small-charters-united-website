@@ -163,3 +163,19 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+.tablink:hover {
+  background-color: #777;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 15px;
+  background-color: #1c1c1c;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center
+}

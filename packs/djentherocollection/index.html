@@ -6,29 +6,13 @@
 		<link rel="icon" href="../../favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" media="screen" href="../../style.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<style>
-		/* Style tab links */
-		.tablink {
-			background-color: #555;
-			color: white;
-			float: left;
-			border: none;
-			outline: none;
-			cursor: pointer;
-			padding: 14px 16px;
-			font-size: 17px;
-			width: 11.11%;
-		}
-		</style>
 	</head>
 	<body style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('djentherocollection.png'); background-attachment: fixed; background-size: cover;">
 		<p><img src="../../banner.png" width="75%" float="center"></p>
 		<div class="navbar">
 			<a href="../../">Home</a>
 			<div class="dropdown">
-				<button class="dropbtn">Packs/Setlists
-					<i class="fa fa-caret-down"></i>
-				</button>
+				<button class="dropbtn">Packs/Setlists</button>
 				<div class="dropdown-content">
 					<a href="../airconhero">AirCon Hero</a>
 					<a href="../djentherocollection" class="active">Djent Hero Collection</a>
@@ -41,15 +25,17 @@
 			</div>
 		</div>
 		
-		<button class="tablink" onclick="openPage('DHC1')">Pack #1</button>
-		<button class="tablink" onclick="openPage('DHC2')">Pack #2</button>
-		<button class="tablink" onclick="openPage('DHC3')">Pack #3</button>
-		<button class="tablink" onclick="openPage('DHC4')">Pack #4</button>
-		<button class="tablink" onclick="openPage('DHC5')">Pack #5</button>
-		<button class="tablink" onclick="openPage('DHC6')">Pack #6</button>
-		<button class="tablink" onclick="openPage('DHC7')">Pack #7</button>
-		<button class="tablink" onclick="openPage('DHC8')">Pack #8</button>
-		<button class="tablink" onclick="openPage('DHC9')" id="defaultOpen">Pack #9</button>
+		<div class="btn-group" style="width:100%">
+			<a href="dhc1.html"><button style="width:11.1%">Pack 1</button></a>
+			<a href="dhc2.html"><button style="width:11.1%">Pack 2</button></a>
+			<a href="dhc3.html"><button style="width:11.1%">Pack 3</button></a>
+			<a href="dhc4.html"><button style="width:11.1%">Pack 4</button></a>
+			<a href="dhc5.html"><button style="width:11.1%">Pack 5</button></a>
+			<a href="dhc6.html"><button style="width:11.1%">Pack 6</button></a>
+			<a href="dhc7.html"><button style="width:11.1%">Pack 7</button></a>
+			<a href="dhc8.html"><button style="width:11.1%">Pack 8</button></a>
+			<a href="dhc9.html"><button style="width:11.1%">Pack 9</button></a>
+		</div>
 		
 		<h1>Djent Hero Collection</h1>
 		<h4>By Zantor and the Djent Hero Team</h4>
@@ -776,24 +762,5 @@
 				</tr>
 				
 		</div>
-		
-		<script>
-			function openPage(pageName,elmnt,color) {
-				var i, tabcontent, tablinks;
-				tabcontent = document.getElementsByClassName("tabcontent");
-				for (i = 0; i < tabcontent.length; i++) {
-					tabcontent[i].style.display = "none";
-				}
-				tablinks = document.getElementsByClassName("tablink");
-				for (i = 0; i < tablinks.length; i++) {
-					tablinks[i].style.backgroundColor = "";
-				}
-				document.getElementById(pageName).style.display = "block";
-					elmnt.style.backgroundColor = color;
-				}
-
-				// Get the element with id="defaultOpen" and click on it
-				document.getElementById("defaultOpen").click();
-		</script>
 	</body>
 </html>
